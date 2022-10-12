@@ -1,6 +1,9 @@
 [submodule "core-new"]
 	path = core-new
-url=https://github.com/Pasaria22/core-new.git
+    url = https://github.com/Pasaria22/core-new.git
 [submodule "core-legacy"]
 	path = core-legacy
-url=https://github.com/Pasaria22/core-legacy.git
+    url = https://github.com/Pasaria22/core-legacy.git
+[submodule "core-commons"]
+    path = core-commons
+    url = https://github.com/Pasaria22/core-common.git
