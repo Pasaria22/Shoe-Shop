@@ -4,6 +4,6 @@
 [submodule "core-legacy"]
 	path = core-legacy
     url = https://github.com/Pasaria22/core-legacy.git
-[submodule "core-commons"]
-    path = core-commons
-    url = https://github.com/Pasaria22/core-common.git
+[submodule "core-common"]
+	path = core-common
+	url = https://github.com/Pasaria22/core-common.git
