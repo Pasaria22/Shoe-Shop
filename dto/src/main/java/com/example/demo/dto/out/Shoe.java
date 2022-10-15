@@ -20,6 +20,29 @@ public class Shoe {
   @JsonPOJOBuilder(withPrefix = "")
   public static class ShoeBuilder {
 
+    private String name;
+    private BigInteger size;
+    private Color color;
+
+    public ShoeBuilder name(String name) {
+      this.name = name;
+      return this;
+    }
+
+    public ShoeBuilder size (BigInteger size) {
+      this.size = size;
+      return this;
+    }
+
+    public ShoeBuilder color (Color color) {
+      this.color = color;
+      return this;
+    }
+
+    public Shoe build() {
+      return new Shoe(name, size, color);
+    }
+
   }
 
 
