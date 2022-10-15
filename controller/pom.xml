@@ -32,6 +32,16 @@
       <artifactId>core-new</artifactId>
       <version>${parent.version}</version>
     </dependency>
+    <dependency>
+      <groupId>com.example</groupId>
+      <artifactId>core-common</artifactId>
+      <version>${parent.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.example</groupId>
+      <artifactId>service</artifactId>
+      <version>${parent.version}</version>
+    </dependency>
   </dependencies>
 
   <build>
