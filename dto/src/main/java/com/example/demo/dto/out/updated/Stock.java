@@ -1,17 +1,38 @@
 package com.example.demo.dto.out.updated;
 
 import com.example.demo.dto.enums.State;
-import com.example.demo.dto.out.Shoe;
-import lombok.Getter;
-import lombok.Setter;
+import com.example.demo.dto.out.Shoes;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import lombok.Builder;
+import lombok.Value;
 
 import java.util.List;
 
-@Getter
-@Setter
+
+@Value
+@Builder
+@JsonDeserialize(builder = Shoes.ShoesBuilder.class)
 public class Stock {
 
-    private List<Shoe> shoes;
-
     private State state;
+    private List<newShoes> shoes;
+
+    public static class StockBuilder {
+        private State state;
+        private List<newShoes> shoes;
+
+        public StockBuilder state (State state) {
+            this.state = state;
+            return this;
+        }
+
+        public StockBuilder shoes (List<newShoes> shoes) {
+            this.shoes = shoes;
+            return this;
+        }
+
+        public Stock build() {
+            return new Stock(state, shoes);
+        }
+    }
 }
