@@ -2,51 +2,47 @@ package com.example.demo.dto.out.updated;
 
 
 import com.example.demo.dto.in.ShoeFilter.Color;
-import com.example.demo.dto.out.updated.newShoe.newShoeBuilder;
+import com.example.demo.dto.out.updated.NewShoe.NewShoeBuilder;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
 import lombok.Builder;
 import lombok.Value;
 
-import java.math.BigInteger;
-
 @Value
 @Builder
-@JsonDeserialize(builder = newShoeBuilder.class)
-public class newShoe {
+@JsonDeserialize(builder = NewShoeBuilder.class)
+public class NewShoe {
 
     private Color color;
-    private BigInteger size;
-    private BigInteger quantity;
-
+    private int size;
+    private int quantity;
 
     @JsonPOJOBuilder(withPrefix = "")
-    public static class newShoeBuilder {
+    public static class NewShoeBuilder {
 
         private Color color;
-        private BigInteger size;
-        private BigInteger quantity;
+        private int size;
+        private int quantity;
 
-        public newShoeBuilder color (Color color) {
+        public NewShoeBuilder color(Color color) {
             this.color = color;
             return this;
         }
 
 
-        public newShoeBuilder size (BigInteger size) {
+        public NewShoeBuilder size(int size) {
             this.size = size;
             return this;
         }
 
-        public newShoeBuilder quantity(BigInteger quantity) {
+        public NewShoeBuilder quantity(int quantity) {
             this.quantity = quantity;
             return this;
         }
 
 
-
-        public newShoe build() {
-            return new newShoe(color, size, quantity);
+        public NewShoe build() {
+            return new NewShoe(color, size, quantity);
         }
 
     }

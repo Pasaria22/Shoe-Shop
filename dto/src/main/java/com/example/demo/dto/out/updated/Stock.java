@@ -15,18 +15,18 @@ import java.util.List;
 public class Stock {
 
     private State state;
-    private List<newShoes> shoes;
+    private List<NewShoe> shoes;
 
     public static class StockBuilder {
         private State state;
-        private List<newShoes> shoes;
+        private List<NewShoe> shoes;
 
         public StockBuilder state (State state) {
             this.state = state;
             return this;
         }
 
-        public StockBuilder shoes (List<newShoes> shoes) {
+        public StockBuilder shoes (List<NewShoe> shoes) {
             this.shoes = shoes;
             return this;
         }

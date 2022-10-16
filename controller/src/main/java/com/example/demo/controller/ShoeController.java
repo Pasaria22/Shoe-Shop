@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import com.example.demo.dto.in.ShoeFilter;
 import com.example.demo.dto.out.Shoes;
+import com.example.demo.dto.out.updated.Stock;
 import com.example.demo.facade.ShoeFacade;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -22,6 +23,13 @@ public class ShoeController {
   public ResponseEntity<Shoes> all(@RequestBody ShoeFilter filter, @RequestHeader Integer version){
 
     return ResponseEntity.ok(shoeFacade.get(version).search(filter));
+
+  }
+
+  @GetMapping(path = "/stock")
+  public ResponseEntity<Stock> allStock(@RequestHeader Integer version){
+
+    return ResponseEntity.ok(shoeFacade.get(version).findAllStock());
 
   }
 

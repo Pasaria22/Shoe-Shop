@@ -1,6 +1,6 @@
 package com.example.demo.dto.out.updated;
 
-import com.example.demo.dto.out.updated.newShoes.newShoesBuilder;
+import com.example.demo.dto.out.updated.NewShoes.newShoesBuilder;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
 import lombok.Builder;
@@ -11,22 +11,22 @@ import java.util.List;
 @Value
 @Builder
 @JsonDeserialize(builder = newShoesBuilder.class)
-public class newShoes {
+public class NewShoes {
 
-    private List<newShoe> shoes;
+    private List<NewShoe> shoes;
 
     @JsonPOJOBuilder(withPrefix = "")
     public static class newShoesBuilder {
 
-        private List<newShoe> shoes;
+        private List<NewShoe> shoes;
 
-        public newShoesBuilder shoes(List<newShoe> shoes) {
+        public newShoesBuilder shoes(List<NewShoe> shoes) {
             this.shoes = shoes;
             return this;
         }
 
-        public newShoes build() {
-            return new newShoes(shoes);
+        public NewShoes build() {
+            return new NewShoes(shoes);
         }
     }
 }
