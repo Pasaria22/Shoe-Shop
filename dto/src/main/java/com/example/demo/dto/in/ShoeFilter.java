@@ -14,8 +14,6 @@ public class ShoeFilter {
 
     BLACK,
     BLUE,
-    ;
-
   }
 
   public Optional<BigInteger> getSize(){

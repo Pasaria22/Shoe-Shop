@@ -15,14 +15,14 @@ public class NewShoe {
 
     private Color color;
     private int size;
-    private int quantity;
+    private long quantity;
 
     @JsonPOJOBuilder(withPrefix = "")
     public static class NewShoeBuilder {
 
         private Color color;
         private int size;
-        private int quantity;
+        private long quantity;
 
         public NewShoeBuilder color(Color color) {
             this.color = color;
@@ -35,7 +35,7 @@ public class NewShoe {
             return this;
         }
 
-        public NewShoeBuilder quantity(int quantity) {
+        public NewShoeBuilder quantity(long quantity) {
             this.quantity = quantity;
             return this;
         }
