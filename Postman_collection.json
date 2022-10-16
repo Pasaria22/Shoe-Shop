@@ -1,0 +1,26 @@
+{
+	"info": {
+		"_postman_id": "97d97fc8-d185-4058-9a6f-161020af9c03",
+		"name": "Decathlon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11978655"
+	},
+	"item": [
+		{
+			"name": "Stock",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Patch",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
