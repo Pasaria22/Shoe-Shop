@@ -1,8 +1,8 @@
-package com.example.demo.dto.out.updated;
+package com.example.demo.dto.out.v2;
 
 
 import com.example.demo.dto.in.ShoeFilter.Color;
-import com.example.demo.dto.out.updated.NewShoe.NewShoeBuilder;
+import com.example.demo.dto.out.v2.NewShoe.NewShoeBuilder;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
 import lombok.Builder;

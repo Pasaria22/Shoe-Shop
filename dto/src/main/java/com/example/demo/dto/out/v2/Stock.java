@@ -1,4 +1,4 @@
-package com.example.demo.dto.out.updated;
+package com.example.demo.dto.out.v2;
 
 import com.example.demo.dto.enums.State;
 import com.example.demo.dto.out.Shoes;

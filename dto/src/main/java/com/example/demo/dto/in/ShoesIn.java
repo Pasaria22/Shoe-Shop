@@ -1,4 +1,4 @@
-package com.example.demo.dto.out.updated;
+package com.example.demo.dto.in;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,10 +9,11 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class ResultQueryDto {
+public class ShoesIn {
 
     private int color;
     private int size;
+    private String name;
     private long quantity;
 
 

@@ -1,6 +1,6 @@
-package com.example.demo.dto.out.updated;
+package com.example.demo.dto.out.v2;
 
-import com.example.demo.dto.out.updated.NewShoes.newShoesBuilder;
+import com.example.demo.dto.out.v2.NewShoes.newShoesBuilder;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
 import lombok.Builder;

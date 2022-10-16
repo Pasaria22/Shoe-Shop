@@ -1,16 +1,14 @@
 package com.example.demo.controller;
 
 import com.example.demo.dto.in.ShoeFilter;
+import com.example.demo.dto.in.ShoesIn;
 import com.example.demo.dto.out.Shoes;
-import com.example.demo.dto.out.updated.Stock;
+import com.example.demo.dto.out.v2.Stock;
 import com.example.demo.facade.ShoeFacade;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestHeader;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping(path = "/shoes")
@@ -31,6 +29,11 @@ public class ShoeController {
 
     return ResponseEntity.ok(shoeFacade.get(version).findAllStock());
 
+  }
+
+  @PatchMapping
+  public ResponseEntity<ShoesIn> patchStock(@RequestBody ShoesIn shoesIn, @RequestHeader Integer version){
+    return ResponseEntity.ok(shoeFacade.get(version).patchStock(shoesIn));
   }
 
 }
